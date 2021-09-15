@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogio</title>
+</head>
+<body>
+    <style>
+    #div_relogio {
+        w'idth: 1000p'x;
+        background-color: aqua;
+        color: blueviolet;
+        font-size: 200px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+    </style>
+        <div id="div_relogio"> 
+            vai aparecer aqui
+        </div>
+</body>
+<script>
+    function relogio(){
+        var data = new Date ();
+        var hr = data.getHours();
+        var min =data.getMinutes();
+        var seg = data.getSeconds();
+
+        var tempo_total = hr+":" + min +":" + seg + "";
+        var tempo = window.document.getElementById('div_relogio');
+        tempo.innerHTML = tempo_total;
+
+    }
+    setInterval(relogio)
+</script>
+</html>
